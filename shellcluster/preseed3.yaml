@@ -1,0 +1,38 @@
+config: {}
+networks: []
+storage_pools: []
+profiles: []
+cluster:
+  server_name: ubuntuvm3
+  enabled: true
+  member_config:
+  - entity: storage-pool
+    name: default
+    key: source
+    value: /var/snap/lxd/common/lxd/storage-pools/default
+    description: '"source" property for storage pool "default"'
+  - entity: storage-pool
+    name: local
+    key: source
+    value: /var/snap/lxd/common/lxd/storage-pools/local
+    description: '"source" property for storage pool "local"'
+  cluster_address: 192.168.100.21:8443
+  cluster_certificate: |
+    -----BEGIN CERTIFICATE-----
+    MIICDTCCAZOgAwIBAgIRAIK9VUdDNvgb1v/Kto5vgAowCgYIKoZIzj0EAwMwNzEc
+    MBoGA1UEChMTbGludXhjb250YWluZXJzLm9yZzEXMBUGA1UEAwwOcm9vdEB1YnVu
+    dHV2bTEwHhcNMjIwMzAyMDQ1NTA4WhcNMzIwMjI4MDQ1NTA4WjA3MRwwGgYDVQQK
+    ExNsaW51eGNvbnRhaW5lcnMub3JnMRcwFQYDVQQDDA5yb290QHVidW50dXZtMTB2
+    MBAGByqGSM49AgEGBSuBBAAiA2IABA2LWyy+XsF12uvJ8vcNVT/MqMlu22X8P7Dj
+    JQYJHkFf4Jb1z7yFPdkVUTI08gcpCZyhr+8lm336DONu4++63GeeGeJi1feCb+fv
+    f7s1yzHH0niKbVJOTYtaKC+FaPbNfqNjMGEwDgYDVR0PAQH/BAQDAgWgMBMGA1Ud
+    JQQMMAoGCCsGAQUFBwMBMAwGA1UdEwEB/wQCMAAwLAYDVR0RBCUwI4IJdWJ1bnR1
+    dm0xhwR/AAABhxAAAAAAAAAAAAAAAAAAAAABMAoGCCqGSM49BAMDA2gAMGUCMQDh
+    9aIlvwS2go0lDronTWNUjc4KXuq0fevmxBfVJe6IjbCFBNTk+5TlAPEYsDFOk0UC
+    MDR0yb5xsJYKiB7XOFywfSHx4ZHiqxTqTpYu11c8xL4Rqy8N2iyDtTau5ENPNv6c
+    sQ==
+    -----END CERTIFICATE-----
+  server_address: 192.168.100.23:8443
+  cluster_password: ""
+  cluster_certificate_path: ""
+  cluster_token: ""
